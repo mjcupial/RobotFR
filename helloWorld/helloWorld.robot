@@ -8,19 +8,10 @@ Suite Setup
 Suite Teardown
 ...    SeleniumLibrary.Close Browser
 
-
-
-*** Variables ***
-${typical_string}    'ej'
-${params}   ${1}    ${2}    ${3}    ${4}
-
 *** Test Cases ***
 Login test
-    Create Webdriver    Chrome    executable_path=/usr/local/bin/chromedriver.exe
+    Create Webdriver    Chrome    executable_path=/home/maciej/Documents/sqlite3/chromedriver
     Go To    http://www.google.com
     sleep    5s
     Page Should Contain    traf
     Close Browser
-
-
-*** Keywords ***
